@@ -44,13 +44,17 @@ if __name__ == "__main__":  # Accept command line inputs for  ligpargen files on
 try:
     a = int(molnumx)
     b = int(molnumy)
-    if a > b:    
-        ratioA = str(a/b)
-        ratioB = str(b/b)
+    if a > b:
+        ratioA = str(a / b)
+        ratioA = ratioA.strip(".0")
+        ratioB = str(b / b)
+        ratioB = ratioB.strip(".0")
         ratio = ratioA + ratioB
     elif b > a:
-        ratioA = str(a/a)
-        ratioB = str(b/a)
+        ratioA = str(a / a)
+        ratioA = ratioA.strip(".0")
+        ratioB = str(b / a)
+        ratioB = ratioB.strip(".0")
         ratio = ratioA + ratioB
     else:
         ratio = "11"
