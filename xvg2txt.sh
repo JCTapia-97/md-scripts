@@ -3,7 +3,7 @@
 
 find */*xvg | while read FILE
 do	
-	python3 xvg2dat.py $FILE
+	python3 xvg2txtconverter.py $FILE
 	echo $FILE
 done
 
